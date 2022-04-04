@@ -696,8 +696,6 @@ did = ? and queue = {QUEUE_TYPE_REV} and due <= ? limit ?""",
         )
 
     def _adjRevIvl(self, card: Card, idealIvl: int) -> int:
-        if self._spreadRev:
-            idealIvl = self._fuzzedIvl(idealIvl)
         return idealIvl
 
     # Dynamic deck handling
